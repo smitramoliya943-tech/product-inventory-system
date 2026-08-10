@@ -132,9 +132,9 @@ function sortProducts(parameter) {
 
     var dropdown = document.querySelector(".dropdown");
     if (dropdown) {
-        // dropdown ni value setAttribute thi set kari chhe
+ 
         dropdown.setAttribute("value", preference);
-        dropdown.value = preference; // select element ma displayed value sync rakhva mate jaruri
+        dropdown.value = preference; 
     }
 
     var products = getStoredProducts();
@@ -253,7 +253,7 @@ function openForm(mode, product) {
         formTitle.innerText = "Edit Product";
         saveBtn.innerText = "Save Changes";
 
-        // input ni current displayed value setAttribute + value property banne thi sync kari chhe
+       
         titleInput.setAttribute("value", product.title);
         titleInput.value = product.title;
 
@@ -479,7 +479,6 @@ document.querySelector("#grid").addEventListener("click", function (e) {
     var card = e.target.closest(".tag-card");
     if (!card) return;
 
-    // card ni id have getAttribute thi read kari chhe
     var id = card.getAttribute("id");
 
     if (e.target.classList.contains("edit-btn")) {
